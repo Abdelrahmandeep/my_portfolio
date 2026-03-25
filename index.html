@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Abdelrahman Alnaggar — Junior Data Analyst specializing in Python, SQL, Power BI, and Machine Learning. Explore my projects and get in touch.">
+    <!-- Open Graph -->
     <meta property="og:title" content="Abdo Alnaggar — Data Analyst Portfolio">
-    <meta property="og:description" content="Turning data into actionable insights. Explore my projects in data analysis and machine learning.">
+    <meta property="og:description" content="Turning data into actionable insights. Explore projects in data analysis and machine learning.">
+    <meta property="og:image" content="og_image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Abdo (Abdelrahman) Alnaggar - Data Analyst Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%238B5A2B'/><text y='.9em' font-size='70' font-family='Outfit,sans-serif' font-weight='700' fill='%23FDFBF7' x='15'>A</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +20,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- ========== SCROLL PROGRESS BAR ========== -->
+    <div id="scroll-progress"></div>
+
+    <!-- ========== LOADING SCREEN ========== -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="loader-name">Abdo<span>.</span></h1>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ========== BACK TO TOP ========== -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== WHATSAPP BUTTON ========== -->
+    <a id="whatsapp-btn" href="https://wa.me/201069218392?text=Hi%20Abdo%2C%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20get%20in%20touch!" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== COPY TOAST ========== -->
+
+    <!-- ========== NAV OVERLAY (mobile) ========== -->
+    <div id="nav-overlay"></div>
+
+    <!-- ========== NAVBAR ========== -->
     <nav id="navbar">
         <div class="nav-container">
             <h1 class="logo">Abdo<span>.</span></h1>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certs</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,10 +70,13 @@
         </div>
     </nav>
 
+    <!-- ========== HERO ========== -->
     <section id="hero" class="reveal">
+        <canvas id="particles-canvas"></canvas>
         <div class="hero-content">
             <h2 class="greeting">Hello, I'm</h2>
             <h1 class="name">Abdelrahman Alnaggar</h1>
+            <div class="work-badge"><span class="badge-dot"></span> Open to Work</div>
             <h3 class="title">I'm a <span id="typed-text"></span><span class="cursor">|</span></h3>
             <p class="tagline">I guide companies to overcome data confusion by providing accurate analysis and visualizations that highlight trends and opportunities.</p>
             <div class="hero-buttons">
@@ -56,6 +93,7 @@
         </div>
     </section>
 
+    <!-- ========== ABOUT ========== -->
     <section id="about" class="reveal">
         <h2 class="section-title">About Me</h2>
         <div class="about-container glass-card">
@@ -66,6 +104,28 @@
         </div>
     </section>
 
+    <!-- ========== STATS COUNTER ========== -->
+    <section id="stats" class="stats-section reveal">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-project-diagram"></i>
+                <h3 class="counter" data-target="4">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-certificate"></i>
+                <h3 class="counter" data-target="2">0</h3>
+                <p>Programs Completed</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-database"></i>
+                <h3 class="counter" data-target="48">0</h3>
+                <p>Thousand+ Rows Analyzed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
     <section id="education" class="reveal">
         <h2 class="section-title">Education</h2>
         <div class="education-card glass-card">
@@ -76,53 +136,55 @@
         </div>
     </section>
 
+    <!-- ========== SKILLS ========== -->
     <section id="skills" class="reveal">
         <h2 class="section-title">My Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="MySQL · PostgreSQL · SQL Server">
                 <i class="fas fa-database"></i>
                 <p>SQL</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="85%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="Pivot Tables · Power Query · Charts">
                 <i class="fas fa-file-excel"></i>
                 <p>Excel</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="90%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="Pandas · NumPy · Scikit-learn · Matplotlib">
                 <i class="fab fa-python"></i>
                 <p>Python</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="80%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="DAX · Power Query · Reports · Dashboards">
                 <i class="fas fa-chart-bar"></i>
                 <p>Power BI</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 85%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="85%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="Random Forest · Regression · Scikit-learn">
                 <i class="fas fa-brain"></i>
                 <p>Machine Learning</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 75%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="75%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="Descriptive · Inferential · Probability">
                 <i class="fas fa-chart-line"></i>
                 <p>Statistics</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 80%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="80%"></div></div>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-tooltip="ETL · Pandas · Data Wrangling · Validation">
                 <i class="fas fa-broom"></i>
                 <p>Data Cleaning</p>
-                <div class="skill-bar"><div class="skill-fill" style="--pct: 90%"></div></div>
+                <div class="skill-bar"><div class="skill-fill" data-pct="90%"></div></div>
             </div>
         </div>
     </section>
 
+    <!-- ========== EXPERIENCE ========== -->
     <section id="experience" class="reveal">
         <h2 class="section-title">Work Experience</h2>
         <div class="timeline">
             <div class="timeline-item right">
                 <div class="timeline-content glass-card">
-                    <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2024 &ndash; 2025</span>
+                    <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2025 &ndash; Present</span>
                     <h3>Data Analyst Specialist Program</h3>
                     <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
                     <ul>
@@ -147,17 +209,50 @@
         </div>
     </section>
 
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section id="certifications" class="reveal">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certs-grid">
+            <div class="cert-card glass-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h3>Data Analyst Specialist</h3>
+                    <h4>Digital Egypt Pioneers Initiative (DEPI)</h4>
+                    <span class="cert-year">2025</span>
+                </div>
+            </div>
+            <div class="cert-card glass-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h3>Artificial Intelligence for Business</h3>
+                    <h4>National Telecommunication Institute (NTI)</h4>
+                    <span class="cert-year">2024</span>
+                </div>
+            </div>
+            <div class="cert-card glass-card">
+                <div class="cert-icon"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h3>Python for Data Science</h3>
+                    <h4>Self-Study / Online Course</h4>
+                    <span class="cert-year">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
     <section id="projects" class="reveal">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
-            
-            <div class="project-card glass-card">
+
+            <div class="project-card glass-card" data-modal="modal-1">
                 <div class="project-image-wrapper">
                     <img src="Screenshot 2026-02-13 124919.png" alt="Flight Ticket Price Prediction" class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
                     <h3>Flight Ticket Price Prediction</h3>
-                    <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing. Included advanced feature engineering.</p>
+                    <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing.</p>
                     <div class="project-tags">
                         <span>Python</span><span>Scikit-learn</span><span>ML</span>
                     </div>
@@ -165,13 +260,14 @@
                 </div>
             </div>
 
-            <div class="project-card glass-card">
+            <div class="project-card glass-card" data-modal="modal-2">
                 <div class="project-image-wrapper">
                     <img src="Screenshot 2026-02-17 021752.png" alt="Prestige Cars Sales Performance Analysis" class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
                     <h3>Prestige Cars Sales Analysis</h3>
-                    <p>Cleaned data with Python and built an interactive dashboard using Plotly and Excel to analyze $25.2M revenue, uncovering top global markets and brand profitability.</p>
+                    <p>Cleaned data with Python and built an interactive dashboard to analyze $25.2M revenue, uncovering top global markets.</p>
                     <div class="project-tags">
                         <span>Python</span><span>Plotly</span><span>Excel</span>
                     </div>
@@ -179,13 +275,14 @@
                 </div>
             </div>
 
-            <div class="project-card glass-card">
+            <div class="project-card glass-card" data-modal="modal-3">
                 <div class="project-image-wrapper">
                     <img src="Screenshot 2026-03-13 164602.png" alt="Coca-Cola Logistics & Sales Dashboard" class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
                     <h3>Coca-Cola Logistics &amp; Sales Dashboard</h3>
-                    <p>Developed a logistics and sales dashboard using Excel to track $6.8M in revenue, analyzing delivery efficiency across major carriers and key regional sales trends.</p>
+                    <p>Developed a dashboard using Excel to track $6.8M in revenue, analyzing delivery efficiency across major carriers.</p>
                     <div class="project-tags">
                         <span>Excel</span><span>Dashboard</span><span>Logistics</span>
                     </div>
@@ -193,23 +290,78 @@
                 </div>
             </div>
 
-            <div class="project-card glass-card">
+            <div class="project-card glass-card" data-modal="modal-4">
                 <div class="project-image-wrapper">
                     <img src="Screenshot 2026-02-07 062619.png" alt="Pizza Sales Performance Dashboard" class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
                     <h3>Pizza Sales Performance Dashboard</h3>
-                    <p>Built an interactive Excel dashboard analyzing 48K+ orders and $817K revenue to uncover peak hours, top products, and sales trends.</p>
+                    <p>Built an interactive Excel dashboard analyzing 48K+ orders and $817K revenue to uncover peak hours and top products.</p>
                     <div class="project-tags">
                         <span>Excel</span><span>SQL</span><span>Dashboard</span>
                     </div>
                     <a href="https://github.com/Abdelrahmandeep/Pizza-Sales-Performance-Analysis" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
+    <!-- ========== PROJECT MODALS ========== -->
+    <div class="modal-overlay" id="modal-1">
+        <div class="modal-box glass-card">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="Screenshot 2026-02-13 124919.png" alt="Flight Ticket Price Prediction">
+            <h2>Flight Ticket Price Prediction</h2>
+            <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing. Included advanced feature engineering and hyperparameter tuning. Achieved <strong>R² = 0.85</strong> and <strong>MAPE = 1.5%</strong>.</p>
+            <div class="project-tags">
+                <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Machine Learning</span><span>Feature Engineering</span>
+            </div>
+            <a href="https://github.com/Abdelrahmandeep/Flight-Price-Prediction" class="btn btn-primary" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-2">
+        <div class="modal-box glass-card">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="Screenshot 2026-02-17 021752.png" alt="Prestige Cars Sales Analysis">
+            <h2>Prestige Cars Sales Performance Analysis</h2>
+            <p>Cleaned raw sales data with Python and built a fully interactive dashboard using Plotly and Excel to analyze <strong>$25.2M in revenue</strong>. Uncovered top global markets, brand profitability, and seasonal trends for luxury cars.</p>
+            <div class="project-tags">
+                <span>Python</span><span>Plotly</span><span>Excel</span><span>Data Cleaning</span><span>Dashboard</span>
+            </div>
+            <a href="https://github.com/Abdelrahmandeep/Prestige-Cars-Sales-Analysis" class="btn btn-primary" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-3">
+        <div class="modal-box glass-card">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="Screenshot 2026-03-13 164602.png" alt="Coca-Cola Logistics Dashboard">
+            <h2>Coca-Cola Logistics &amp; Sales Dashboard</h2>
+            <p>Developed a comprehensive logistics and sales dashboard using Excel to track <strong>$6.8M in revenue</strong>. Analyzed delivery efficiency and on-time rates across major carriers. Identified key regional sales trends to support operational decisions.</p>
+            <div class="project-tags">
+                <span>Excel</span><span>Dashboard</span><span>Logistics</span><span>Data Analysis</span>
+            </div>
+            <a href="https://github.com/Abdelrahmandeep/Coca-Cola-Sales-Logistics-Performance-Dashboard" class="btn btn-primary" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-4">
+        <div class="modal-box glass-card">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="Screenshot 2026-02-07 062619.png" alt="Pizza Sales Dashboard">
+            <h2>Pizza Sales Performance Dashboard</h2>
+            <p>Built an interactive Excel dashboard analyzing <strong>48,000+ orders</strong> and <strong>$817K in revenue</strong>. Uncovered peak ordering hours, top-selling products, and monthly sales trends. Used SQL for data extraction and Excel for visualization.</p>
+            <div class="project-tags">
+                <span>Excel</span><span>SQL</span><span>Dashboard</span><span>Data Analysis</span>
+            </div>
+            <a href="https://github.com/Abdelrahmandeep/Pizza-Sales-Performance-Analysis" class="btn btn-primary" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <!-- ========== SERVICES ========== -->
     <section id="services" class="reveal">
         <h2 class="section-title">Services I Offer</h2>
         <div class="services-grid">
@@ -231,29 +383,50 @@
         </div>
     </section>
 
+    <!-- ========== CONTACT ========== -->
     <section id="contact" class="reveal">
         <h2 class="section-title">Get In Touch</h2>
         <p class="contact-intro">Let's turn your data into powerful insights. Contact me today.</p>
-        <div class="contact-container glass-card">
-            <div class="contact-info">
+        <div class="contact-wrapper">
+            <div class="contact-info-panel glass-card">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <p>Alexandria, Egypt</p>
                 </div>
-
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <p><a href="tel:+201069218392" class="contact-link">+20 106 921 8392</a></p>
                 </div>
-
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <p><a href="mailto:abdoaln222@gmail.com" class="contact-link">abdoaln222@gmail.com</a></p>
                 </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p><a href="https://www.linkedin.com/in/abdelrahman-alnaggar-44r4/" target="_blank" class="contact-link">LinkedIn Profile</a></p>
+                </div>
             </div>
+            <form class="contact-form glass-card" action="https://formspree.io/f/meeryrbg" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; border:none; font-size:1rem;">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </section>
 
+    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="footer-content">
             <h2>Abdo<span>.</span></h2>
@@ -270,7 +443,7 @@
                     <a href="https://kafiil.com/u/abdelrahman_alnaggar" target="_blank" class="platform-btn">كفيل</a>
                 </div>
             </div>
-            <p>&copy; 2026 Abdelrahman Alnaggar. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 Abdelrahman Alnaggar. All rights reserved.</p>
         </div>
     </footer>
 
