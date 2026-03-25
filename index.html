@@ -53,7 +53,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <h1 class="logo">Abdo<span>.</span></h1>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -66,9 +66,9 @@
             <button id="theme-toggle" aria-label="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
             </button>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="Gemini_Generated_Image_pvw80rpvw80rpvw8.png" alt="Abdelrahman Alnaggar Profile Picture" loading="lazy">
+            <img src="Gemini_Generated_Image_pvw80rpvw80rpvw8.png" alt="Abdelrahman Alnaggar Profile Picture" loading="eager">
         </div>
     </section>
 
@@ -249,7 +249,7 @@
 
             <div class="project-card glass-card" data-modal="modal-1">
                 <div class="project-image-wrapper">
-                    <img src="Screenshot 2026-02-13 124919.png" alt="Flight Ticket Price Prediction" class="project-image" loading="lazy">
+                    <img src="screenshot-flight-prediction.png" alt="Flight Ticket Price Prediction" class="project-image" loading="lazy">
                     <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
@@ -264,7 +264,7 @@
 
             <div class="project-card glass-card" data-modal="modal-2">
                 <div class="project-image-wrapper">
-                    <img src="Screenshot 2026-02-17 021752.png" alt="Prestige Cars Sales Performance Analysis" class="project-image" loading="lazy">
+                    <img src="screenshot-prestige-cars.png" alt="Prestige Cars Sales Performance Analysis" class="project-image" loading="lazy">
                     <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
@@ -279,7 +279,7 @@
 
             <div class="project-card glass-card" data-modal="modal-3">
                 <div class="project-image-wrapper">
-                    <img src="Screenshot 2026-03-13 164602.png" alt="Coca-Cola Logistics & Sales Dashboard" class="project-image" loading="lazy">
+                    <img src="screenshot-coca-cola.png" alt="Coca-Cola Logistics & Sales Dashboard" class="project-image" loading="lazy">
                     <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
@@ -294,7 +294,7 @@
 
             <div class="project-card glass-card" data-modal="modal-4">
                 <div class="project-image-wrapper">
-                    <img src="Screenshot 2026-02-07 062619.png" alt="Pizza Sales Performance Dashboard" class="project-image" loading="lazy">
+                    <img src="screenshot-pizza-sales.png" alt="Pizza Sales Performance Dashboard" class="project-image" loading="lazy">
                     <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
                 <div class="project-body">
@@ -314,7 +314,7 @@
     <div class="modal-overlay" id="modal-1">
         <div class="modal-box glass-card">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <img src="Screenshot 2026-02-13 124919.png" alt="Flight Ticket Price Prediction">
+            <img src="screenshot-flight-prediction.png" alt="Flight Ticket Price Prediction">
             <h2>Flight Ticket Price Prediction</h2>
             <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing. Included advanced feature engineering and hyperparameter tuning. Achieved <strong>R² = 0.85</strong> and <strong>MAPE = 1.5%</strong>.</p>
             <div class="project-tags">
@@ -327,7 +327,7 @@
     <div class="modal-overlay" id="modal-2">
         <div class="modal-box glass-card">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <img src="Screenshot 2026-02-17 021752.png" alt="Prestige Cars Sales Analysis">
+            <img src="screenshot-prestige-cars.png" alt="Prestige Cars Sales Analysis">
             <h2>Prestige Cars Sales Performance Analysis</h2>
             <p>Cleaned raw sales data with Python and built a fully interactive dashboard using Plotly and Excel to analyze <strong>$25.2M in revenue</strong>. Uncovered top global markets, brand profitability, and seasonal trends for luxury cars.</p>
             <div class="project-tags">
@@ -340,7 +340,7 @@
     <div class="modal-overlay" id="modal-3">
         <div class="modal-box glass-card">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <img src="Screenshot 2026-03-13 164602.png" alt="Coca-Cola Logistics Dashboard">
+            <img src="screenshot-coca-cola.png" alt="Coca-Cola Logistics Dashboard">
             <h2>Coca-Cola Logistics &amp; Sales Dashboard</h2>
             <p>Developed a comprehensive logistics and sales dashboard using Excel to track <strong>$6.8M in revenue</strong>. Analyzed delivery efficiency and on-time rates across major carriers. Identified key regional sales trends to support operational decisions.</p>
             <div class="project-tags">
@@ -353,7 +353,7 @@
     <div class="modal-overlay" id="modal-4">
         <div class="modal-box glass-card">
             <button class="modal-close"><i class="fas fa-times"></i></button>
-            <img src="Screenshot 2026-02-07 062619.png" alt="Pizza Sales Dashboard">
+            <img src="screenshot-pizza-sales.png" alt="Pizza Sales Dashboard">
             <h2>Pizza Sales Performance Dashboard</h2>
             <p>Built an interactive Excel dashboard analyzing <strong>48,000+ orders</strong> and <strong>$817K in revenue</strong>. Uncovered peak ordering hours, top-selling products, and monthly sales trends. Used SQL for data extraction and Excel for visualization.</p>
             <div class="project-tags">

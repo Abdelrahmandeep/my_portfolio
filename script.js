@@ -8,6 +8,15 @@ window.addEventListener('load', () => {
     setTimeout(() => loader.classList.add('hidden'), 1300);
 });
 
+// ─── Image Fallback ──────────────────────────────────────────
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', () => {
+        img.style.background = 'var(--card-bg)';
+        img.style.display = 'flex';
+        img.alt = img.alt || 'Image not found';
+    });
+});
+
 // ─── Dark / Light Mode Toggle ─────────────────────────────────
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
@@ -41,8 +50,8 @@ const hamburger  = document.querySelector('.hamburger');
 const navLinks   = document.querySelector('.nav-links');
 const navOverlay = document.getElementById('nav-overlay');
 
-const openNav  = () => { navLinks.classList.add('active'); navOverlay.classList.add('visible'); document.body.style.overflow = 'hidden'; };
-const closeNav = () => { navLinks.classList.remove('active'); navOverlay.classList.remove('visible'); document.body.style.overflow = ''; };
+const openNav  = () => { navLinks.classList.add('active'); navOverlay.classList.add('visible'); document.body.style.overflow = 'hidden'; hamburger.setAttribute('aria-expanded', 'true'); };
+const closeNav = () => { navLinks.classList.remove('active'); navOverlay.classList.remove('visible'); document.body.style.overflow = ''; hamburger.setAttribute('aria-expanded', 'false'); };
 
 hamburger.addEventListener('click', () => navLinks.classList.contains('active') ? closeNav() : openNav());
 navOverlay.addEventListener('click', closeNav);
@@ -61,9 +70,6 @@ const revealOnScroll = () => {
     });
 };
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-
 // ─── Active Nav Link on Scroll ────────────────────────────────
 const sections = document.querySelectorAll('section[id]');
 const navItems  = document.querySelectorAll('.nav-links a');
@@ -79,24 +85,34 @@ const setActiveLink = () => {
     });
 };
 
-window.addEventListener('scroll', setActiveLink);
-setActiveLink();
-
 // ─── Sticky Navbar Shadow ─────────────────────────────────────
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    navbar.style.boxShadow = window.scrollY > 50
-        ? '0 4px 20px rgba(0,0,0,0.12)'
-        : 'none';
-});
 
 // ─── Scroll Progress Bar ──────────────────────────────────────
 const progressBar = document.getElementById('scroll-progress');
+
+// ─── Unified Scroll Handler (throttled with rAF) ─────────────
+let scrollTicking = false;
 window.addEventListener('scroll', () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    progressBar.style.width = `${Math.min(progress, 100)}%`;
+    if (!scrollTicking) {
+        requestAnimationFrame(() => {
+            revealOnScroll();
+            setActiveLink();
+            // Navbar shadow
+            navbar.style.boxShadow = window.scrollY > 50
+                ? '0 4px 20px rgba(0,0,0,0.12)'
+                : 'none';
+            // Progress bar
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = `${Math.min(progress, 100)}%`;
+            scrollTicking = false;
+        });
+        scrollTicking = true;
+    }
 });
+revealOnScroll();
+setActiveLink();
 
 // ─── Back to Top Button ───────────────────────────────────────
 const backToTopBtn = document.getElementById('back-to-top');
@@ -200,6 +216,22 @@ const skillObserver = new IntersectionObserver(entries => {
 
 const skillsSection = document.getElementById('skills');
 if (skillsSection) skillObserver.observe(skillsSection);
+
+// ─── Timeline Staggered Reveal ──────────────────────────────
+const timelineItems = document.querySelectorAll('.timeline-item');
+const timelineObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            timelineObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 });
+
+timelineItems.forEach((item, i) => {
+    item.style.transitionDelay = `${i * 200}ms`;
+    timelineObserver.observe(item);
+});
 
 // ─── Particle Canvas (Hero Background) ───────────────────────
 const canvas  = document.getElementById('particles-canvas');
@@ -310,6 +342,18 @@ window.addEventListener('resize', resize);
 resize();
 animateParticles();
 
+// Pause particles when hero is off-screen, resume when visible
+const heroSection = document.getElementById('hero');
+const particlesObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+        if (!animId) animateParticles();
+    } else {
+        cancelAnimationFrame(animId);
+        animId = null;
+    }
+}, { threshold: 0 });
+if (heroSection) particlesObserver.observe(heroSection);
+
 // ─── Project Modals ───────────────────────────────────────────
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', e => {
@@ -335,6 +379,7 @@ document.querySelectorAll('.modal-overlay').forEach(overlay => {
 
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
+        closeNav();
         document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
     }
 });
@@ -381,10 +426,3 @@ if (form) {
 
 
 
-// ─── Escape key closes nav & modals ──────────────────────────
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        closeNav();
-        document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
-    }
-});
