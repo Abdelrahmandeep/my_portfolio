@@ -1084,20 +1084,6 @@ footer h2 span { color: var(--primary-color); }
 }
 
 @media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        flex-direction: column;
-        padding: 2rem 0;
-        text-align: center;
-        border-bottom: 1px solid var(--glass-border);
-    }
-    .nav-links.active { display: flex; }
     .hamburger { display: block; }
     .section-title { font-size: 2rem; }
     .timeline::after { left: 31px; }
