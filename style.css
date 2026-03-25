@@ -886,6 +886,7 @@ section {
     opacity: 0.85;
 }
 
+<<<<<<< HEAD
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -971,6 +972,33 @@ section {
 /* =========================================
    Footer
    ========================================= */
+=======
+.contact-item p {
+    color: var(--text-color); /* سيصبح بني داكن في الفاتح، وكريمي في المظلم */
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contact-link {
+    color: var(--text-color); /* يتبع لون النص الأساسي للموقع */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: var(--primary-color); /* يتغير للون البني الدافئ عند الوقوف عليه */
+    text-decoration: underline;
+}
+
+.contact-item i {
+    color: var(--primary-color); /* استخدام لون الـ Primary للأيقونات لتظهر بوضوح دائم */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+>>>>>>> 814b7c149cf67babc25bd41f5f27897df5f037bd
 footer {
     background: var(--nav-bg);
     text-align: center;
@@ -1376,6 +1404,7 @@ footer h2 span { color: var(--primary-color); }
         gap: 1.5rem !important;
         right: auto !important;
     }
+<<<<<<< HEAD
 
     #hero { min-height: auto; padding-top: 20px; }
     .hero-image img { width: 160px; height: 200px; }
@@ -1393,3 +1422,6 @@ footer h2 span { color: var(--primary-color); }
 
     @page { margin: 1.5cm; }
 }
+=======
+}
+>>>>>>> 814b7c149cf67babc25bd41f5f27897df5f037bd
