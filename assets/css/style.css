@@ -153,10 +153,10 @@ h1, h2, h3 { font-weight: 700; }
    ========================================= */
 #back-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 46px;
-    height: 46px;
+    bottom: 70px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: var(--primary-color);
     color: #FDFBF7;
@@ -683,90 +683,67 @@ section {
    ========================================= */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.skill-card {
+/* =========================================
+   Skill Categories & Tags (replaces circular progress)
+   ========================================= */
+.skill-category {
     background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: 2rem 1rem 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.8rem;
     box-shadow: var(--shadow);
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* SVG Circular Progress */
-.skill-circle {
-    position: relative;
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 1rem;
-}
-
-.skill-circle svg {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-}
-
-.skill-bg-ring {
-    fill: none;
-    stroke: var(--glass-border);
-    stroke-width: 8;
-}
-
-.skill-progress-ring {
-    fill: none;
-    stroke: var(--primary-color);
-    stroke-width: 8;
-    stroke-linecap: round;
-    stroke-dasharray: 339.292;
-    stroke-dashoffset: 339.292;
-    transition: stroke-dashoffset 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.skill-pct {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.skill-category-title {
+    font-size: 1.05rem;
     font-weight: 700;
-    font-size: 0.95rem;
     color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.skill-card i {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+.skill-category-title i {
+    font-size: 1.2rem;
     color: var(--secondary-color);
-    display: block;
-    transition: transform 0.3s ease;
 }
 
-.skill-card:hover i {
-    transform: scale(1.15);
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.skill-name {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-}
-
-/* Phase 4: Permanent subtitle (replaces hover-only tooltip) */
-.skill-sub {
-    font-size: 0.72rem;
-    opacity: 0.55;
+.skill-tag {
+    background: var(--glass-border);
+    color: var(--text-color);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    line-height: 1.4;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    color: #FDFBF7;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* =========================================
@@ -1351,6 +1328,60 @@ footer h2 span { color: var(--primary-color); }
 }
 
 @media screen and (max-width: 768px) {
+    #hero {
+        padding-top: 80px;
+        min-height: auto;
+        gap: 1.25rem;
+    }
+    .hero-image-container {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    .hero-image-container::before {
+        inset: -6px;
+        border-radius: 28px;
+    }
+    .hero-image-container img {
+        border-radius: 24px;
+    }
+    .hero-content {
+        margin-top: 0;
+    }
+    .greeting {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+    .name {
+        font-size: 2.1rem;
+        margin-bottom: 0.35rem;
+    }
+    .work-badge {
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 0.85rem;
+        font-size: 0.8rem;
+    }
+    .title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .tagline {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin: 0 auto 1.25rem;
+        max-width: 520px;
+    }
+    .hero-buttons {
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+    .hero-buttons .btn {
+        padding: 0.65rem 1.35rem;
+        font-size: 0.9rem;
+    }
+    .social-icons {
+        margin-bottom: 0.5rem;
+    }
     .hamburger { display: block; }
     .section-title { font-size: 2rem; }
     .timeline::after { left: 31px; }
@@ -1360,16 +1391,21 @@ footer h2 span { color: var(--primary-color); }
     .cert-card { flex-direction: column; text-align: center; }
     .contact-item { justify-content: flex-start; }
     .scroll-indicator { display: none; }
+    section { padding: 60px 5% 85px; }
+    .skills-grid { grid-template-columns: 1fr; }
 }
 
 @media screen and (max-width: 480px) {
-    .name { font-size: 2.2rem; }
-    .title { font-size: 1.4rem; }
-    .hero-buttons { flex-direction: column; align-items: center; }
-    section { padding: 80px 5%; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-image img { width: 220px; height: 280px; }
-    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .name { font-size: 1.85rem; }
+    .title { font-size: 1.1rem; }
+    .hero-buttons { flex-direction: column; align-items: stretch; width: 100%; max-width: 280px; margin-left: auto; margin-right: auto; }
+    .hero-buttons .btn { width: 100%; text-align: center; }
+    .hero-image-container {
+        width: 140px;
+        height: 140px;
+    }
+    section { padding: 50px 5% 85px; }
+    .skills-grid { grid-template-columns: 1fr; }
 }
 
 /* =========================================
@@ -1447,19 +1483,19 @@ footer h2 span { color: var(--primary-color); }
    ========================================= */
 #whatsapp-btn {
     position: fixed;
-    bottom: 5.5rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
+    bottom: 16px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: #25D366;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    z-index: 998;
+    z-index: 999;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: wa-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s both;
@@ -1785,13 +1821,19 @@ html[lang="ar"] .logo {
 /* Adjust timeline details for mobile RTL */
 @media screen and (max-width: 992px) {
     html[lang="ar"] .hero-image-container {
-        width: 280px;
-        height: 360px;
+        width: 260px;
+        height: 320px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html[lang="ar"] .hero-image-container {
+        width: 150px;
+        height: 150px;
     }
 }
 @media screen and (max-width: 480px) {
     html[lang="ar"] .hero-image-container {
-        width: 220px;
-        height: 280px;
+        width: 140px;
+        height: 140px;
     }
 }

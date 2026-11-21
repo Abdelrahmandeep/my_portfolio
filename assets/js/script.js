@@ -250,24 +250,6 @@ const statsObserver = new IntersectionObserver(entries => {
 const statsSection = document.querySelector('.stats-section');
 if (statsSection) statsObserver.observe(statsSection);
 
-// ─── Animated Skill Bars on Scroll ───────────────────────────
-const skillFills = document.querySelectorAll('.skill-fill');
-let skillsAnimated = false;
-
-const skillObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !skillsAnimated) {
-        skillsAnimated = true;
-        skillFills.forEach(fill => {
-            const pct = fill.getAttribute('data-pct') || '0%';
-            const delay = Math.random() * 300;
-            setTimeout(() => { fill.style.width = pct; }, delay);
-        });
-    }
-}, { threshold: 0.2 });
-
-const skillsSection = document.getElementById('skills');
-if (skillsSection) skillObserver.observe(skillsSection);
-
 // ─── Timeline Staggered Reveal ──────────────────────────────
 const timelineItems = document.querySelectorAll('.timeline-item');
 const timelineObserver = new IntersectionObserver(entries => {
