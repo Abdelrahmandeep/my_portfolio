@@ -63,13 +63,13 @@
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#hero"><span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></a></li>
-                <li><a href="#projects"><span class="lang-en">Projects</span><span class="lang-ar">المشاريع</span></a></li>
                 <li><a href="#about"><span class="lang-en">About</span><span class="lang-ar">من أنا</span></a></li>
                 <li><a href="#education"><span class="lang-en">Education</span><span class="lang-ar">التعليم</span></a></li>
                 <li><a href="#services"><span class="lang-en">Services</span><span class="lang-ar">الخدمات</span></a></li>
                 <li><a href="#experience"><span class="lang-en">Experience</span><span class="lang-ar">الخبرة</span></a></li>
                 <li><a href="#skills"><span class="lang-en">Skills</span><span class="lang-ar">المهارات</span></a></li>
                 <li><a href="#certifications"><span class="lang-en">Certifications</span><span class="lang-ar">الشهادات</span></a></li>
+                <li><a href="#projects"><span class="lang-en">Projects</span><span class="lang-ar">المشاريع</span></a></li>
                 <li><a href="#contact"><span class="lang-en">Contact</span><span class="lang-ar">اتصل بي</span></a></li>
             </ul>
             <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
@@ -117,7 +117,7 @@
                     <span class="lang-en">View My Work</span>
                     <span class="lang-ar">عرض أعمالي</span>
                 </a>
-                <a href="assets/docs/Abdelrahman_Elnaggar_CV_1Page.pdf" download="Abdelrahman_Elnaggar_CV_1Page.pdf" target="_blank"
+                <a href="assets/docs/AbdelrahmanElnaggarCV.pdf" download="AbdelrahmanElnaggarCV.pdf" target="_blank"
                     class="btn btn-secondary">
                     <span class="lang-en">Download CV</span>
                     <span class="lang-ar">تحميل السيرة الذاتية</span>
@@ -138,147 +138,6 @@
             <span class="lang-en">Scroll</span>
             <span class="lang-ar">مرر لأسفل</span>
             <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- ========== PROJECTS ========== -->
-    <section id="projects" class="reveal">
-        <h2 class="section-title">
-            <span class="lang-en">Featured Projects</span>
-            <span class="lang-ar">أبرز المشاريع</span>
-        </h2>
-        <div class="projects-grid">
-
-            <!-- 1. FEATURED: Healthcare Data Warehouse, BI & Risk Analytics -->
-            <div class="project-card glass-card featured" data-modal="modal-3">
-                <span class="featured-badge">
-                    <i class="fas fa-star"></i> 
-                    <span class="lang-en">Featured</span>
-                    <span class="lang-ar">مميز</span>
-                </span>
-                <div class="project-image-wrapper">
-                    <img src="assets/img/projects/heart-disease-end-to-end.png" alt="Healthcare Data Warehouse, BI & Risk Analytics"
-                        class="project-image" loading="lazy">
-                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        <span class="lang-en">Healthcare Data Warehouse, BI &amp; Risk Analytics</span>
-                        <span class="lang-ar">مستودع بيانات الرعاية الصحية وذكاء الأعمال وتحليل المخاطر</span>
-                    </h3>
-                    <p class="lang-en">End-to-end Healthcare Data Warehouse &amp; BI project on CDC BRFSS records (319K+). Implemented Medallion Architecture (Staging, Bronze, Silver, Gold) in SQL Server with an automated Python ETL pipeline, an interactive Power BI dashboard with patient risk segmentation, and Optuna-tuned ML risk scoring models (LightGBM) deployed with a live Streamlit app.</p>
-                    <p class="lang-ar">مشروع متكامل لمستودع بيانات الرعاية الصحية وذكاء الأعمال باستخدام بيانات CDC BRFSS لأكثر من 319 ألف مريض. يتضمن بنية Medallion في SQL Server مع خطوط ETL آلية ببايثون، لوحة بيانات تفاعلية في Power BI لتقسيم مخاطر المرضى، ونماذج تنبؤية مدعومة بتطبيق Streamlit.</p>
-                    <div class="project-tags">
-                        <span>SQL Server</span><span>Python ETL</span><span>Medallion DW</span><span>Power BI</span><span>Streamlit</span>
-                    </div>
-                    <a href="https://github.com/Abdelrahmandeep/Heart-Disease-End-to-End-ML-PowerBI" class="btn btn-outline"
-                        target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
-                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 2. NexVault – Financial Intelligence Dashboard Suite -->
-            <div class="project-card glass-card" data-modal="modal-5">
-                <div class="project-image-wrapper">
-                    <img src="assets/img/projects/nex-valut.png" alt="NexVault – Financial Intelligence Dashboard Suite"
-                        class="project-image" loading="lazy">
-                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        <span class="lang-en">NexVault – Financial Intelligence Dashboard Suite</span>
-                        <span class="lang-ar">نكس فالت – منظومة لوحات ذكاء الأداء المالي</span>
-                    </h3>
-                    <p class="lang-en">Architected an executive Power BI financial analytics suite across 4 specialized dashboards using a simulated financial enterprise dataset. Monitored transaction and compliance data tracking revenue, margins, and a simulated 64.11% ROI metric, with advanced DAX measures for dynamic budgeting and variance tracking.</p>
-                    <p class="lang-ar">تصميم منظومة لوحات بيانات مالية تنفيذية في Power BI عبر 4 لوحات متخصصة باستخدام مجموعة بيانات مالية محاكاة. تتبع الإيرادات وهوامش الأرباح ومؤشر عائد استثمار محاكى بنسبة 64.11%، مع معادلات DAX متقدمة لمقارنة الميزانيات وتحليل الفروقات.</p>
-                    <div class="project-tags">
-                        <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Financial Analytics</span>
-                    </div>
-                    <a href="https://github.com/Abdelrahmandeep/Nex-Valut---Financial-Performance-Dashboard"
-                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
-                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 3. RetailNova Sales Performance Dashboard -->
-            <div class="project-card glass-card" data-modal="modal-4">
-                <div class="project-image-wrapper">
-                    <img src="assets/img/projects/retailnova.png" alt="RetailNova Sales Performance Dashboard"
-                        class="project-image" loading="lazy">
-                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        <span class="lang-en">RetailNova Sales Performance Dashboard</span>
-                        <span class="lang-ar">لوحة أداء مبيعات ريتيل نوفا</span>
-                    </h3>
-                    <p class="lang-en">Developed an interactive sales dashboard in Advanced Excel (Power Query, Power Pivot) analyzing $109.85M in revenue and $9.37M in profit across 31K+ orders. Tracked regional performance, top products, and sales representative efficiency to drive retail insights.</p>
-                    <p class="lang-ar">تطوير لوحة مبيعات تفاعلية في إكسيل المتقدم (Power Query, Power Pivot) لتحليل إيرادات بلغت 109.85 مليون دولار وأرباح بقيمة 9.37 مليون دولار عبر أكثر من 31 ألف طلبية. تتبع أداء المناطق، المنتجات الأكثر مبيعاً، وكفاءة مندوبي المبيعات.</p>
-                    <div class="project-tags">
-                        <span>Advanced Excel</span><span>Power Query</span><span>Power Pivot</span><span>SQL</span>
-                    </div>
-                    <a href="https://github.com/Abdelrahmandeep/RetailNova-Sales-Performance-Dashboard"
-                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
-                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 4. Prestige Cars Sales Analysis -->
-            <div class="project-card glass-card" data-modal="modal-2">
-                <div class="project-image-wrapper">
-                    <img src="assets/img/projects/prestige-cars.png" alt="Prestige Cars Sales Performance Analysis"
-                        class="project-image" loading="lazy">
-                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        <span class="lang-en">Prestige Cars Sales Analysis</span>
-                        <span class="lang-ar">تحليل مبيعات سيارات بريستيج</span>
-                    </h3>
-                    <p class="lang-en">Cleaned data with Python and built an interactive dashboard to analyze $25.2M revenue, uncovering top global markets.</p>
-                    <p class="lang-ar">تنظيف البيانات باستخدام بايثون وبناء لوحة بيانات تفاعلية لتحليل مبيعات بلغت 25.2 مليون دولار، والكشف عن أفضل الأسواق العالمية.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>Plotly</span><span>Excel</span>
-                    </div>
-                    <a href="https://github.com/Abdelrahmandeep/Prestige-Cars-Sales-Analysis" class="btn btn-outline"
-                        target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
-                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 5. Flight Ticket Price Prediction -->
-            <div class="project-card glass-card" data-modal="modal-1">
-                <div class="project-image-wrapper">
-                    <img src="assets/img/projects/flight-prediction.png" alt="Flight Ticket Price Prediction"
-                        class="project-image" loading="lazy">
-                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <div class="project-body">
-                    <h3>
-                        <span class="lang-en">Flight Ticket Price Prediction</span>
-                        <span class="lang-ar">التنبؤ بأسعار تذاكر الطيران</span>
-                    </h3>
-                    <p class="lang-en">Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing.</p>
-                    <p class="lang-ar">تطوير نموذج انحدار باستخدام الغابات العشوائية للتنبؤ بأسعار تذاكر الطيران بناءً على شركة الطيران، المسار، ووقت السفر.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>Scikit-learn</span><span>ML</span>
-                    </div>
-                    <a href="https://github.com/Abdelrahmandeep/Flight-Price-Prediction" class="btn btn-outline"
-                        target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
-                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
-                    </a>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -572,7 +431,146 @@
         </div>
     </section>
 
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="reveal">
+        <h2 class="section-title">
+            <span class="lang-en">Featured Projects</span>
+            <span class="lang-ar">أبرز المشاريع</span>
+        </h2>
+        <div class="projects-grid">
 
+            <!-- 1. FEATURED: Healthcare Data Warehouse, BI & Risk Analytics -->
+            <div class="project-card glass-card featured" data-modal="modal-3">
+                <span class="featured-badge">
+                    <i class="fas fa-star"></i> 
+                    <span class="lang-en">Featured</span>
+                    <span class="lang-ar">مميز</span>
+                </span>
+                <div class="project-image-wrapper">
+                    <img src="assets/img/projects/heart-disease-end-to-end.png" alt="Healthcare Data Warehouse, BI & Risk Analytics"
+                        class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="project-body">
+                    <h3>
+                        <span class="lang-en">Healthcare Data Warehouse, BI &amp; Risk Analytics</span>
+                        <span class="lang-ar">مستودع بيانات الرعاية الصحية وذكاء الأعمال وتحليل المخاطر</span>
+                    </h3>
+                    <p class="lang-en">End-to-end Healthcare Data Warehouse &amp; BI project on CDC BRFSS records (319K+). Implemented Medallion Architecture (Staging, Bronze, Silver, Gold) in SQL Server with an automated Python ETL pipeline, an interactive Power BI dashboard with patient risk segmentation, and Optuna-tuned ML risk scoring models (LightGBM) deployed with a live Streamlit app.</p>
+                    <p class="lang-ar">مشروع متكامل لمستودع بيانات الرعاية الصحية وذكاء الأعمال باستخدام بيانات CDC BRFSS لأكثر من 319 ألف مريض. يتضمن بنية Medallion في SQL Server مع خطوط ETL آلية ببايثون، لوحة بيانات تفاعلية في Power BI لتقسيم مخاطر المرضى، ونماذج تنبؤية مدعومة بتطبيق Streamlit.</p>
+                    <div class="project-tags">
+                        <span>SQL Server</span><span>Python ETL</span><span>Medallion DW</span><span>Power BI</span><span>Streamlit</span>
+                    </div>
+                    <a href="https://github.com/Abdelrahmandeep/Heart-Disease-End-to-End-ML-PowerBI" class="btn btn-outline"
+                        target="_blank" rel="noopener noreferrer">
+                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
+                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. NexVault – Financial Intelligence Dashboard Suite -->
+            <div class="project-card glass-card" data-modal="modal-5">
+                <div class="project-image-wrapper">
+                    <img src="assets/img/projects/nex-valut.png" alt="NexVault – Financial Intelligence Dashboard Suite"
+                        class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="project-body">
+                    <h3>
+                        <span class="lang-en">NexVault – Financial Intelligence Dashboard Suite</span>
+                        <span class="lang-ar">نكس فالت – منظومة لوحات ذكاء الأداء المالي</span>
+                    </h3>
+                    <p class="lang-en">Architected an executive Power BI financial analytics suite across 4 specialized dashboards using a simulated financial enterprise dataset. Monitored transaction and compliance data tracking revenue, margins, and a simulated 64.11% ROI metric, with advanced DAX measures for dynamic budgeting and variance tracking.</p>
+                    <p class="lang-ar">تصميم منظومة لوحات بيانات مالية تنفيذية في Power BI عبر 4 لوحات متخصصة باستخدام مجموعة بيانات مالية محاكاة. تتبع الإيرادات وهوامش الأرباح ومؤشر عائد استثمار محاكى بنسبة 64.11%، مع معادلات DAX متقدمة لمقارنة الميزانيات وتحليل الفروقات.</p>
+                    <div class="project-tags">
+                        <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Financial Analytics</span>
+                    </div>
+                    <a href="https://github.com/Abdelrahmandeep/Nex-Valut---Financial-Performance-Dashboard"
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
+                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. RetailNova Sales Performance Dashboard -->
+            <div class="project-card glass-card" data-modal="modal-4">
+                <div class="project-image-wrapper">
+                    <img src="assets/img/projects/retailnova.png" alt="RetailNova Sales Performance Dashboard"
+                        class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="project-body">
+                    <h3>
+                        <span class="lang-en">RetailNova Sales Performance Dashboard</span>
+                        <span class="lang-ar">لوحة أداء مبيعات ريتيل نوفا</span>
+                    </h3>
+                    <p class="lang-en">Developed an interactive sales dashboard in Advanced Excel (Power Query, Power Pivot) analyzing $109.85M in revenue and $9.37M in profit across 31K+ orders. Tracked regional performance, top products, and sales representative efficiency to drive retail insights.</p>
+                    <p class="lang-ar">تطوير لوحة مبيعات تفاعلية في إكسيل المتقدم (Power Query, Power Pivot) لتحليل إيرادات بلغت 109.85 مليون دولار وأرباح بقيمة 9.37 مليون دولار عبر أكثر من 31 ألف طلبية. تتبع أداء المناطق، المنتجات الأكثر مبيعاً، وكفاءة مندوبي المبيعات.</p>
+                    <div class="project-tags">
+                        <span>Advanced Excel</span><span>Power Query</span><span>Power Pivot</span><span>SQL</span>
+                    </div>
+                    <a href="https://github.com/Abdelrahmandeep/RetailNova-Sales-Performance-Dashboard"
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
+                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Prestige Cars Sales Analysis -->
+            <div class="project-card glass-card" data-modal="modal-2">
+                <div class="project-image-wrapper">
+                    <img src="assets/img/projects/prestige-cars.png" alt="Prestige Cars Sales Performance Analysis"
+                        class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="project-body">
+                    <h3>
+                        <span class="lang-en">Prestige Cars Sales Analysis</span>
+                        <span class="lang-ar">تحليل مبيعات سيارات بريستيج</span>
+                    </h3>
+                    <p class="lang-en">Cleaned data with Python and built an interactive dashboard to analyze $25.2M revenue, uncovering top global markets.</p>
+                    <p class="lang-ar">تنظيف البيانات باستخدام بايثون وبناء لوحة بيانات تفاعلية لتحليل مبيعات بلغت 25.2 مليون دولار، والكشف عن أفضل الأسواق العالمية.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Plotly</span><span>Excel</span>
+                    </div>
+                    <a href="https://github.com/Abdelrahmandeep/Prestige-Cars-Sales-Analysis" class="btn btn-outline"
+                        target="_blank" rel="noopener noreferrer">
+                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
+                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Flight Ticket Price Prediction -->
+            <div class="project-card glass-card" data-modal="modal-1">
+                <div class="project-image-wrapper">
+                    <img src="assets/img/projects/flight-prediction.png" alt="Flight Ticket Price Prediction"
+                        class="project-image" loading="lazy">
+                    <div class="project-overlay"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <div class="project-body">
+                    <h3>
+                        <span class="lang-en">Flight Ticket Price Prediction</span>
+                        <span class="lang-ar">التنبؤ بأسعار تذاكر الطيران</span>
+                    </h3>
+                    <p class="lang-en">Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing.</p>
+                    <p class="lang-ar">تطوير نموذج انحدار باستخدام الغابات العشوائية للتنبؤ بأسعار تذاكر الطيران بناءً على شركة الطيران، المسار، ووقت السفر.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>ML</span>
+                    </div>
+                    <a href="https://github.com/Abdelrahmandeep/Flight-Price-Prediction" class="btn btn-outline"
+                        target="_blank" rel="noopener noreferrer">
+                        <span class="lang-en">View Project <i class="fas fa-arrow-right"></i></span>
+                        <span class="lang-ar">عرض المشروع <i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- ========== PROJECT MODALS ========== -->
     <div class="modal-overlay" id="modal-1">
