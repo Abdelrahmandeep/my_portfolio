@@ -185,11 +185,21 @@
                         <span class="lang-en">Healthcare Data Warehouse, BI &amp; Risk Analytics</span>
                         <span class="lang-ar">مستودع بيانات الرعاية الصحية وذكاء الأعمال وتحليل المخاطر</span>
                     </h3>
-                    <p class="lang-en">End-to-end Healthcare Data Warehouse &amp; BI project on 319K+ survey records (CDC BRFSS). Implemented Medallion Architecture (Staging, Bronze, Silver, Gold) in SQL Server with an automated Python ETL pipeline, an interactive Power BI dashboard with patient risk segmentation, and Optuna-tuned ML risk scoring models (LightGBM) deployed with a live Streamlit app.</p>
-                    <p class="lang-ar">مشروع متكامل لمستودع بيانات الرعاية الصحية وذكاء الأعمال على أكثر من 319 ألف سجل استبيان (CDC BRFSS). يتضمن بنية Medallion في SQL Server مع خطوط ETL آلية ببايثون، لوحة بيانات تفاعلية في Power BI لتقسيم مخاطر المرضى، ونماذج تنبؤية مدعومة بتطبيق Streamlit.</p>
+                    <p class="lang-en">End-to-end Healthcare Data Warehouse &amp; BI project on 319,795 survey records (CDC BRFSS). Implemented Medallion Architecture (Staging, Bronze, Silver, Gold) in SQL Server with an automated Python ETL pipeline, an interactive Power BI dashboard with risk segmentation, and Optuna-tuned ML risk scoring models (LightGBM) deployed with a live Streamlit app.</p>
+                    <p class="lang-ar">مشروع متكامل لمستودع بيانات الرعاية الصحية وذكاء الأعمال على 319,795 سجل مسح صحي (CDC BRFSS). يتضمن بنية Medallion في SQL Server مع خطوط ETL آلية ببايثون، لوحة بيانات تفاعلية في Power BI لتقسيم المخاطر، ونماذج تنبؤية مدعومة بتطبيق Streamlit.</p>
                     <div class="project-insight">
-                        <span class="lang-en"><strong>Key insight:</strong> [ADD INSIGHT]</span>
-                        <span class="lang-ar"><strong>الرؤية الأساسية:</strong> [ADD INSIGHT]</span>
+                        <div class="project-insight-header">
+                            <span class="lang-en">Key insight:</span>
+                            <span class="lang-ar">أبرز النتائج:</span>
+                        </div>
+                        <div class="project-insight-text clamped">
+                            <span class="lang-en">Heart disease appears in only about 9% of the 319,795 survey records, so the data was balanced with SMOTE and the decision threshold tuned with Youden's J. Five models landed within 0.003 ROC-AUC of each other (0.837 to 0.840), and the tuned LightGBM raised recall from 78.58% (logistic regression baseline) to 80.57%.</span>
+                            <span class="lang-ar">تظهر أمراض القلب في نحو 9% فقط من 319,795 سجل مسح صحي، لذلك تمت موازنة البيانات بـ SMOTE وضبط حد التصنيف بطريقة Youden's J. جاءت 5 نماذج ضمن فارق 0.003 في ROC-AUC (من 0.837 إلى 0.840)، وحسّن LightGBM المضبوط الـ recall من 78.58% (الانحدار اللوجستي) إلى 80.57%.</span>
+                        </div>
+                        <button type="button" class="insight-toggle-btn" aria-label="Toggle full insight">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-ar">اقرأ المزيد</span>
+                        </button>
                     </div>
                     <p class="project-note">
                         <span class="lang-en">Educational project built on public survey data, not for clinical use.</span>
@@ -228,8 +238,18 @@
                     <p class="lang-en">Architected an executive Power BI financial analytics suite across 4 specialized dashboards using a simulated financial enterprise dataset. Monitored transaction and compliance data tracking revenue, margins, and a simulated 64.11% ROI metric, with advanced DAX measures for dynamic budgeting and variance tracking.</p>
                     <p class="lang-ar">تصميم منظومة لوحات بيانات مالية تنفيذية في Power BI عبر 4 لوحات متخصصة باستخدام مجموعة بيانات مالية محاكاة. تتبع الإيرادات وهوامش الأرباح ومؤشر عائد استثمار محاكى بنسبة 64.11%، مع معادلات DAX متقدمة لمقارنة الميزانيات وتحليل الفروقات.</p>
                     <div class="project-insight">
-                        <span class="lang-en"><strong>Key insight:</strong> [ADD INSIGHT]</span>
-                        <span class="lang-ar"><strong>الرؤية الأساسية:</strong> [ADD INSIGHT]</span>
+                        <div class="project-insight-header">
+                            <span class="lang-en">Key insight:</span>
+                            <span class="lang-ar">أبرز النتائج:</span>
+                        </div>
+                        <div class="project-insight-text clamped">
+                            <span class="lang-en">Across 2019–2025 and 150K customers, NexVault generated $4.26B in revenue and $1.66B in profit (64.11% ROI), with won deals driving 84.64% of revenue. On the risk side, 5K fraud cases caused $219.66M in losses, and only 17.26% were detected by AI, versus 51.36% by manual review and 31.38% by the rule engine. The transaction failure rate is 13.34%.</span>
+                            <span class="lang-ar">خلال 2019–2025 وعلى مستوى 150 ألف عميل، حققت NexVault إيرادات 4.26 مليار دولار وأرباحاً 1.66 مليار دولار (ROI بنسبة 64.11%)، مع مساهمة الصفقات الرابحة بـ 84.64% من الإيرادات. وعلى صعيد المخاطر، تسببت 5 آلاف حالة احتيال في خسائر 219.66 مليون دولار، واكتشف الذكاء الاصطناعي 17.26% منها فقط، مقابل 51.36% بالمراجعة اليدوية و31.38% بمحرك القواعد. ومعدل فشل المعاملات 13.34%.</span>
+                        </div>
+                        <button type="button" class="insight-toggle-btn" aria-label="Toggle full insight">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-ar">اقرأ المزيد</span>
+                        </button>
                     </div>
                     <div class="project-tags">
                         <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Financial Analytics</span>
@@ -257,8 +277,18 @@
                     <p class="lang-en">Developed an interactive sales dashboard in Advanced Excel (Power Query, Power Pivot) analyzing $109.85M in revenue and $9.37M in profit across 31K+ orders. Tracked regional performance, top products, and sales representative efficiency to drive retail insights.</p>
                     <p class="lang-ar">تطوير لوحة مبيعات تفاعلية في إكسيل المتقدم (Power Query, Power Pivot) لتحليل إيرادات بلغت 109.85 مليون دولار وأرباح بقيمة 9.37 مليون دولار عبر أكثر من 31 ألف طلبية. تتبع أداء المناطق، المنتجات الأكثر مبيعاً، وكفاءة مندوبي المبيعات.</p>
                     <div class="project-insight">
-                        <span class="lang-en"><strong>Key insight:</strong> Bikes account for 86% of total revenue.</span>
-                        <span class="lang-ar"><strong>الرؤية الأساسية:</strong> الدراجات تمثل 86% من إجمالي الإيرادات.</span>
+                        <div class="project-insight-header">
+                            <span class="lang-en">Key insight:</span>
+                            <span class="lang-ar">أبرز النتائج:</span>
+                        </div>
+                        <div class="project-insight-text clamped">
+                            <span class="lang-en">From 2022 to 2025, RetailNova processed 31,465 orders and 274,914 units, generating $109.85M in revenue against $100.47M in cost for $9.37M in profit. Bikes account for 86% of total sales, with seasonal peaks in March and June, so results depend heavily on one category. Southwest leads regional revenue (ahead of Canada and Northwest), and Online Orders drive the highest sales volume.</span>
+                            <span class="lang-ar">خلال الفترة من 2022 إلى 2025، سجّلت RetailNova إيرادات 109.85 مليون دولار مقابل تكلفة 100.47 مليون دولار وصافي ربح 9.37 مليون دولار، عبر 31,465 طلباً و274,914 وحدة. تستحوذ فئة Bikes على 86% من المبيعات مع ذروتين موسميتين في مارس ويونيو، ما يعني اعتماد النتائج بشكل كبير على فئة واحدة. وتتصدر منطقة Southwest الإيرادات (تليها كندا ثم Northwest)، وتحقق الطلبات الأونلاين أعلى حجم مبيعات.</span>
+                        </div>
+                        <button type="button" class="insight-toggle-btn" aria-label="Toggle full insight">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-ar">اقرأ المزيد</span>
+                        </button>
                     </div>
                     <div class="project-tags">
                         <span>Advanced Excel</span><span>Power Query</span><span>Power Pivot</span><span>SQL</span>
@@ -283,11 +313,21 @@
                         <span class="lang-en">Prestige Cars Sales Analysis</span>
                         <span class="lang-ar">تحليل مبيعات سيارات بريستيج</span>
                     </h3>
-                    <p class="lang-en">Cleaned data with Python and built an interactive dashboard to analyze $25.2M revenue, uncovering top global markets.</p>
-                    <p class="lang-ar">تنظيف البيانات باستخدام بايثون وبناء لوحة بيانات تفاعلية لتحليل مبيعات بلغت 25.2 مليون دولار، والكشف عن أفضل الأسواق العالمية.</p>
+                    <p class="lang-en">Cleaned data with Python and built an interactive dashboard to analyze $25.24M revenue, uncovering top global markets.</p>
+                    <p class="lang-ar">تنظيف البيانات باستخدام بايثون وبناء لوحة بيانات تفاعلية لتحليل مبيعات بلغت 25.24 مليون دولار، والكشف عن أفضل الأسواق العالمية.</p>
                     <div class="project-insight">
-                        <span class="lang-en"><strong>Key insight:</strong> [ADD INSIGHT]</span>
-                        <span class="lang-ar"><strong>الرؤية الأساسية:</strong> [ADD INSIGHT]</span>
+                        <div class="project-insight-header">
+                            <span class="lang-en">Key insight:</span>
+                            <span class="lang-ar">أبرز النتائج:</span>
+                        </div>
+                        <div class="project-insight-text clamped">
+                            <span class="lang-en">In 2015, Prestige Cars generated $25.24M in revenue and $6.51M in profit (25.8% margin), heavily concentrated in EMEA at 92% of total sales versus 8% in North America. Ferrari led both sales and profitability ahead of Aston Martin, while the United Kingdom topped country-level profit (about $2.7M), followed by France and Spain.</span>
+                            <span class="lang-ar">في عام 2015، حققت Prestige Cars إيرادات 25.24 مليون دولار وأرباحاً 6.51 مليون دولار (هامش ربح 25.8%)، مع تركز قوي في EMEA بنسبة 92% من المبيعات مقابل 8% فقط في أمريكا الشمالية. تصدّرت Ferrari المبيعات والربحية متقدمةً على Aston Martin، وجاءت المملكة المتحدة في صدارة الدول من حيث الربح (نحو 2.7 مليون دولار) تليها فرنسا ثم إسبانيا.</span>
+                        </div>
+                        <button type="button" class="insight-toggle-btn" aria-label="Toggle full insight">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-ar">اقرأ المزيد</span>
+                        </button>
                     </div>
                     <div class="project-tags">
                         <span>Python</span><span>Plotly</span><span>Excel</span>
@@ -315,8 +355,18 @@
                     <p class="lang-en">Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing.</p>
                     <p class="lang-ar">تطوير نموذج انحدار باستخدام الغابات العشوائية للتنبؤ بأسعار تذاكر الطيران بناءً على شركة الطيران، المسار، ووقت السفر.</p>
                     <div class="project-insight">
-                        <span class="lang-en"><strong>Key insight:</strong> [ADD INSIGHT]</span>
-                        <span class="lang-ar"><strong>الرؤية الأساسية:</strong> [ADD INSIGHT]</span>
+                        <div class="project-insight-header">
+                            <span class="lang-en">Key insight:</span>
+                            <span class="lang-ar">أبرز النتائج:</span>
+                        </div>
+                        <div class="project-insight-text clamped">
+                            <span class="lang-en">A Random Forest trained on 9 features (airline, route, stops, duration, days remaining) predicts log-transformed ticket prices with little overfitting: R² moves from 0.87 on training data to 0.85 on test data, and MAE from 0.13 to 0.14 (log scale).</span>
+                            <span class="lang-ar">نموذج Random Forest مدرّب على 9 ميزات (شركة الطيران، المسار، التوقفات، المدة، الأيام المتبقية) يتنبأ بلوغاريتم سعر التذكرة بأقل قدر من الـ overfitting: انتقل R² من 0.87 في التدريب إلى 0.85 في الاختبار، وMAE من 0.13 إلى 0.14 (بمقياس اللوغاريتم).</span>
+                        </div>
+                        <button type="button" class="insight-toggle-btn" aria-label="Toggle full insight">
+                            <span class="lang-en">Read more</span>
+                            <span class="lang-ar">اقرأ المزيد</span>
+                        </button>
                     </div>
                     <div class="project-tags">
                         <span>Python</span><span>Scikit-learn</span><span>ML</span>
@@ -444,12 +494,12 @@
                     <ul class="lang-en">
                         <li>Completed hands-on training in machine learning, data analysis, and AI applications.</li>
                         <li>Built and evaluated supervised learning models using Python and Scikit-learn.</li>
-                        <li>Built and evaluated a Random Forest model for flight ticket price prediction (R&sup2; = 0.85, MAPE = 1.5%).</li>
+                        <li>Built and evaluated a Random Forest model for flight ticket price prediction (R² = 0.85).</li>
                     </ul>
                     <ul class="lang-ar">
                         <li>إتمام تدريب عملي في التعلم الآلي وتطبيقات الذكاء الاصطناعي للأعمال.</li>
                         <li>بناء وتقييم نماذج التعلم الخاضع للإشراف باستخدام Python و Scikit-learn.</li>
-                        <li>بناء وتقييم نموذج Random Forest للتنبؤ بأسعار تذاكر الطيران (R² = 0.85, MAPE = 1.5%).</li>
+                        <li>بناء وتقييم نموذج Random Forest للتنبؤ بأسعار تذاكر الطيران (R² = 0.85).</li>
                     </ul>
                 </div>
             </div>
@@ -575,16 +625,10 @@
                 <span class="lang-ar">التنبؤ بأسعار تذاكر الطيران</span>
             </h2>
             <div class="lang-en">
-                <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing. Included advanced feature engineering and hyperparameter tuning. Achieved <strong>R² = 0.85</strong> and <strong>MAPE = 1.5%</strong>.</p>
-                <div class="project-insight">
-                    <strong>Key insight:</strong> [ADD INSIGHT]
-                </div>
+                <p>Developed a Random Forest regression model to predict flight ticket prices based on airline, route, and travel timing. Included advanced feature engineering and hyperparameter tuning. Achieved <strong>R² = 0.85</strong>.</p>
             </div>
             <div class="lang-ar">
-                <p>تطوير نموذج انحدار باستخدام الغابات العشوائية للتنبؤ بأسعار تذاكر الطيران بناءً على شركة الطيران، المسار، ووقت السفر. شمل العمل هندسة متقدمة للميزات وضبط المعلمات الفائقة. تم تحقيق دقة <strong>R² = 0.85</strong> و <strong>MAPE = 1.5%</strong>.</p>
-                <div class="project-insight">
-                    <strong>الرؤية الأساسية:</strong> [ADD INSIGHT]
-                </div>
+                <p>تطوير نموذج انحدار باستخدام الغابات العشوائية للتنبؤ بأسعار تذاكر الطيران بناءً على شركة الطيران، المسار، ووقت السفر. شمل العمل هندسة متقدمة للميزات وضبط المعلمات الفائقة. تم تحقيق دقة <strong>R² = 0.85</strong>.</p>
             </div>
             <div class="project-tags">
                 <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Machine Learning</span><span>Feature Engineering</span>
@@ -606,16 +650,10 @@
                 <span class="lang-ar">تحليل مبيعات سيارات بريستيج</span>
             </h2>
             <div class="lang-en">
-                <p>Cleaned raw sales data with Python and built a fully interactive dashboard using Plotly and Excel to analyze <strong>$25.2M in revenue</strong>. Uncovered top global markets, brand profitability, and seasonal trends for luxury cars.</p>
-                <div class="project-insight">
-                    <strong>Key insight:</strong> [ADD INSIGHT]
-                </div>
+                <p>Cleaned raw sales data with Python and built a fully interactive dashboard using Plotly and Excel to analyze <strong>$25.24M in revenue</strong>. Uncovered top global markets, brand profitability, and seasonal trends for luxury cars.</p>
             </div>
             <div class="lang-ar">
-                <p>تنظيف بيانات المبيعات الأولية باستخدام بايثون وبناء لوحة بيانات تفاعلية بالكامل باستخدام Plotly وإكسيل لتحليل مبيعات بلغت <strong>25.2 مليون دولار</strong>. الكشف عن الأسواق العالمية الكبرى، وربحية العلامات التجارية، والاتجاهات الموسمية للسيارات الفاخرة.</p>
-                <div class="project-insight">
-                    <strong>الرؤية الأساسية:</strong> [ADD INSIGHT]
-                </div>
+                <p>تنظيف بيانات المبيعات الأولية باستخدام بايثون وبناء لوحة بيانات تفاعلية بالكامل باستخدام Plotly وإكسيل لتحليل مبيعات بلغت <strong>25.24 مليون دولار</strong>. الكشف عن الأسواق العالمية الكبرى، وربحية العلامات التجارية، والاتجاهات الموسمية للسيارات الفاخرة.</p>
             </div>
             <div class="project-tags">
                 <span>Python</span><span>Plotly</span><span>Excel</span><span>Data Cleaning</span><span>Dashboard</span>
@@ -638,30 +676,24 @@
             </h2>
             <div class="lang-en">
                 <p>Developed a comprehensive <strong>End-to-End Machine Learning & Business Intelligence</strong> project for predicting and analyzing heart disease risk using the CDC BRFSS dataset containing <strong>319,795 survey records (CDC BRFSS)</strong>.</p>
-                <div class="project-insight">
-                    <strong>Key insight:</strong> [ADD INSIGHT]
-                </div>
                 <p class="project-note">Educational project built on public survey data, not for clinical use.</p>
                 <p><strong>Key Features &amp; Technical Highlights:</strong></p>
                 <ul style="padding-left: 20px; margin-bottom: 1.25rem;">
                     <li style="margin-bottom: 6px;"><strong>Data Warehouse Architecture:</strong> Built a complete Medallion Architecture (Staging, Bronze, Silver, Gold) in SQL Server.</li>
                     <li style="margin-bottom: 6px;"><strong>Automated ETL & Advanced SQL:</strong> Robust Python ETL pipeline with logging, along with 20+ complex SQL queries (CTEs, Window Functions) for analytics.</li>
-                    <li style="margin-bottom: 6px;"><strong>Power BI Dashboard:</strong> Interactive dashboard for patient segmentation (K-Means), risk factor analysis, and healthcare insights.</li>
+                    <li style="margin-bottom: 6px;"><strong>Power BI Dashboard:</strong> Interactive dashboard for risk segmentation (K-Means), risk factor analysis, and healthcare insights.</li>
                     <li style="margin-bottom: 6px;"><strong>ML Pipeline & Explainable AI:</strong> Evaluated 6 ML models, optimized via Optuna (LightGBM V2: ROC-AUC = 0.84), integrated with SHAP for model interpretability.</li>
                     <li style="margin-bottom: 6px;"><strong>Streamlit Predictor:</strong> Interactive web app for interactive risk estimation with dynamic SHAP analysis.</li>
                 </ul>
             </div>
             <div class="lang-ar">
                 <p>تطوير مشروع <strong>متكامل للتعلم الآلي وذكاء الأعمال</strong> لتحليل وتوقع مخاطر أمراض القلب، بناءً على <strong>319,795 سجل استبيان (CDC BRFSS)</strong>.</p>
-                <div class="project-insight">
-                    <strong>الرؤية الأساسية:</strong> [ADD INSIGHT]
-                </div>
                 <p class="project-note">مشروع تعليمي مبني على بيانات استبيان عامة، وليس للاستخدام السريري.</p>
                 <p><strong>أبرز الميزات والتقنيات المستخدمة:</strong></p>
                 <ul style="padding-right: 20px; margin-bottom: 1.25rem;">
                     <li style="margin-bottom: 6px;"><strong>بنية مستودع البيانات:</strong> بناء بنية Medallion متكاملة (Staging, Bronze, Silver, Gold) باستخدام SQL Server.</li>
                     <li style="margin-bottom: 6px;"><strong>خطوط ETL و SQL المتقدمة:</strong> خط معالجة (ETL) آلي باستخدام بايثون مع نظام تسجيل، بالإضافة إلى أكثر من 20 استعلام SQL معقد للتحليلات.</li>
-                    <li style="margin-bottom: 6px;"><strong>لوحة بيانات Power BI:</strong> لوحة تفاعلية لتقسيم المرضى (K-Means) وتحليل عوامل الخطر والرؤى الصحية.</li>
+                    <li style="margin-bottom: 6px;"><strong>لوحة بيانات Power BI:</strong> لوحة تفاعلية لتقسيم فئات المخاطر (K-Means) وتحليل عوامل الخطر والرؤى الصحية.</li>
                     <li style="margin-bottom: 6px;"><strong>التعلم الآلي وتفسير الذكاء الاصطناعي:</strong> تقييم 6 نماذج وضبطها باستخدام Optuna، مع دمج SHAP لتفسير القرارات.</li>
                     <li style="margin-bottom: 6px;"><strong>تطبيق ويب Streamlit:</strong> تطبيق تفاعلي لتقدير تفاعلي للمخاطر مع تحليل SHAP الديناميكي.</li>
                 </ul>
@@ -694,15 +726,9 @@
             </h2>
             <div class="lang-en">
                 <p>Built an interactive Excel dashboard analyzing <strong>$109.85M in revenue</strong> and <strong>$9.37M in profit</strong>. Tracked regional performance, top products, and sales representative efficiency to drive data-driven retail insights.</p>
-                <div class="project-insight">
-                    <strong>Key insight:</strong> Bikes account for 86% of total revenue.
-                </div>
             </div>
             <div class="lang-ar">
                 <p>بناء لوحة بيانات تفاعلية باستخدام إكسيل لتحليل <strong>إيرادات بقيمة 109.85 مليون دولار</strong> و<strong>أرباح بقيمة 9.37 مليون دولار</strong>. تتبع الأداء الإقليمي، والمنتجات الأكثر مبيعاً، وكفاءة مندوبي المبيعات لتقديم رؤى مدعومة بالبيانات.</p>
-                <div class="project-insight">
-                    <strong>الرؤية الأساسية:</strong> الدراجات تمثل 86% من إجمالي الإيرادات.
-                </div>
             </div>
             <div class="project-tags">
                 <span>Excel</span><span>SQL</span><span>Dashboard</span><span>Data Analysis</span>
@@ -739,9 +765,6 @@
             </h2>
             <div class="lang-en">
                 <p>Architected an executive Power BI financial intelligence analytics suite across four specialized dashboards utilizing a <strong>simulated enterprise financial dataset</strong>. Monitored transaction and compliance data, tracking revenue, net margins, and a <strong>simulated 64.11% ROI metric</strong> to support executive decision-making.</p>
-                <div class="project-insight">
-                    <strong>Key insight:</strong> [ADD INSIGHT]
-                </div>
                 <p><strong>Key Accomplishments &amp; Features:</strong></p>
                 <ul style="padding-left: 20px; margin-bottom: 1.25rem;">
                     <li style="margin-bottom: 6px;"><strong>Data Modeling &amp; ETL:</strong> Structured relationship cardinalities using Star Schema and built custom Calendar Table for time intelligence via Power Query.</li>
@@ -751,9 +774,6 @@
             </div>
             <div class="lang-ar">
                 <p>تصميم منظومة تحليلات ذكاء مالي تنفيذية في Power BI عبر أربع لوحات متخصصة باستخدام <strong>مجموعة بيانات مالية محاكاة للشركات</strong>. تتبع مقاييس المعاملات والامتثال مع مراقبة الإيرادات وصافي الأرباح وتتبع <strong>مؤشر عائد استثمار محاكى بنسبة 64.11%</strong> لدعم اتخاذ القرارات الإدارية.</p>
-                <div class="project-insight">
-                    <strong>الرؤية الأساسية:</strong> [ADD INSIGHT]
-                </div>
                 <p><strong>أبرز الإنجازات والميزات:</strong></p>
                 <ul style="padding-right: 20px; margin-bottom: 1.25rem;">
                     <li style="margin-bottom: 6px;"><strong>نمذجة البيانات وETL:</strong> تصميم هيكل العلاقات للبيانات بنظام نجمي (Star Schema) وبناء جدول تقويم مخصص لذكاء الوقت الذاتي عبر Power Query.</li>
@@ -887,22 +907,6 @@
                     aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/Abdelrahmandeep" target="_blank" aria-label="GitHub"><i
                         class="fab fa-github"></i></a>
-            </div>
-            <div class="footer-freelance">
-                <p>
-                    <span class="lang-en">Freelance Platforms:</span>
-                    <span class="lang-ar">منصات العمل الحر:</span>
-                </p>
-                <div class="platform-links">
-                    <a href="https://mostaql.com/u/Abdelrahman874" target="_blank" class="platform-btn">مستقل
-                        (Mostaql)</a>
-                    <a href="https://khamsat.com/user/abdelrahman874" target="_blank" class="platform-btn">خمسات
-                        (Khamsat)</a>
-                    <a href="https://nafezly.com/u/AbdelrahmanAlnaggar" target="_blank" class="platform-btn">نفذلي
-                        (Nafezly)</a>
-                    <a href="https://kafiil.com/u/abdelrahman_alnaggar" target="_blank" class="platform-btn">كفيل
-                        (Kafiil)</a>
-                </div>
             </div>
             <p class="footer-copy lang-en">&copy; 2026 Abdelrahman Elnaggar. All rights reserved.</p>
             <p class="footer-copy lang-ar">&copy; 2026 عبد الرحمن النجار. جميع الحقوق محفوظة.</p>

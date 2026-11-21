@@ -1043,3 +1043,22 @@ if (form) {
         }
     });
 }
+
+// ─── Project Insight Read More / Read Less Toggle (Mobile) ────
+document.querySelectorAll('.insight-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent triggering modal overlay
+        const insightCard = btn.closest('.project-insight');
+        if (!insightCard) return;
+        const textWrapper = insightCard.querySelector('.project-insight-text');
+        if (!textWrapper) return;
+
+        const isClamped = textWrapper.classList.toggle('clamped');
+        const enSpan = btn.querySelector('.lang-en');
+        const arSpan = btn.querySelector('.lang-ar');
+        if (enSpan && arSpan) {
+            enSpan.textContent = isClamped ? 'Read more' : 'Read less';
+            arSpan.textContent = isClamped ? 'اقرأ المزيد' : 'عرض أقل';
+        }
+    });
+});
