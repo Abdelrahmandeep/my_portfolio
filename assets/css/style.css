@@ -980,6 +980,35 @@ section {
     opacity: 0.9;
 }
 
+.project-insight {
+    margin: 0.6rem 0;
+    padding: 0.45rem 0.75rem;
+    background: rgba(139, 90, 43, 0.08);
+    border-inline-start: 3px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.84rem;
+    color: var(--text-color);
+    line-height: 1.45;
+}
+
+[data-theme="dark"] .project-insight {
+    background: rgba(212, 163, 115, 0.1);
+}
+
+.project-insight strong {
+    color: var(--primary-color);
+    margin-inline-end: 4px;
+}
+
+.project-note {
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.82;
+    margin-top: 0.35rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-color);
+}
+
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -1250,43 +1279,45 @@ footer h2 span { color: var(--primary-color); }
 }
 
 .footer-freelance {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.85;
 }
 
 .footer-freelance p {
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     color: var(--secondary-color);
-    font-weight: 700;
-    margin-bottom: 0.65rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
 }
 
 .platform-links {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .platform-btn {
-    padding: 6px 16px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
     font-family: var(--font);
-    border: 1.5px solid var(--primary-color);
-    border-radius: 20px;
-    color: var(--primary-color);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    color: var(--text-color);
     text-decoration: none;
-    transition: all 0.3s ease;
-    background: transparent;
+    transition: all 0.25s ease;
+    background: rgba(139, 90, 43, 0.05);
 }
 
 .platform-btn:hover {
     background-color: var(--primary-color);
     color: #FDFBF7;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 90, 43, 0.25);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(139, 90, 43, 0.2);
 }
 
 .footer-copy {

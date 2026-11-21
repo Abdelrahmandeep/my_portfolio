@@ -179,8 +179,8 @@ backToTopBtn.addEventListener('click', () => {
 
 // ─── Typing Animation ─────────────────────────────────────────
 const typedEl = document.getElementById('typed-text');
-const phrasesEn = ['Data Analyst', 'Python Developer', 'Power BI Expert', 'ML Enthusiast'];
-const phrasesAr = ['محلل بيانات', 'مطور بايثون', 'خبير Power BI', 'مهتم بالتعلم الآلي'];
+const phrasesEn = ['Data Analyst', 'BI Developer', 'Power BI Specialist'];
+const phrasesAr = ['محلل بيانات', 'مطور ذكاء أعمال (BI)', 'أخصائي Power BI'];
 
 const type = () => {
     const currentLang = htmlEl.getAttribute('lang') || 'en';
@@ -1024,13 +1024,22 @@ if (form) {
                 throw new Error('Failed');
             }
         } catch {
-            btn.textContent = currentLang === 'ar' ? '✗ فشل الإرسال، حاول مجدداً' : '✗ Try Again';
+            btn.textContent = currentLang === 'ar' ? '✗ فشل الإرسال، جاري فتح البريد...' : '✗ Opening mail client...';
             btn.style.background = '#e53935';
-            btn.disabled = false;
+
+            // Graceful fallback to mailto link if endpoint fails
+            const name = form.querySelector('[name="name"]')?.value || '';
+            const email = form.querySelector('[name="email"]')?.value || '';
+            const message = form.querySelector('[name="message"]')?.value || '';
+            const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+            const bodyText = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            window.location.href = `mailto:abdelrahmanallnn@gmail.com?subject=${subject}&body=${bodyText}`;
+
             setTimeout(() => {
                 btn.textContent = currentLang === 'ar' ? 'إرسال الرسالة 📨' : 'Send Message 📨';
                 btn.style.background = '';
-            }, 3000);
+                btn.disabled = false;
+            }, 3500);
         }
     });
 }
